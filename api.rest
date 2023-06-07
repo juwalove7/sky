@@ -1,0 +1,50 @@
+// 서버 연결 확인
+GET http://localhost:1004
+
+###
+// 회원가입
+POST http://localhost:1004/signup
+Content-Type: application/json
+
+{
+    "nickname": "banana",
+    "password": "pw12345",
+    "confirm": "pw12345",
+    "email": "love@love.com"
+}
+
+###
+// 유저 정보 확인
+GET http://localhost:1004/users
+
+###
+// 게시글 조회
+GET http://localhost:1004/posts
+
+###
+// 게시글 상세조회
+GET http://localhost:1004/posts/1
+
+###
+// 게시글 작성
+POST http://localhost:1004/posts
+Content-Type: application/json
+
+{
+    "title": "cocoa milk",
+    "content": "is great",
+    "userId": 1
+}
+
+###
+// 게시글 수정
+PATCH  http://localhost:1004/posts/1
+Content-Type: application/json
+
+{
+    "title": "strawberry milk",
+    "content": "is great"
+}
+
+###
+DELETE http://localhost:1004/posts/3
