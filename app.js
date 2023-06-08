@@ -1,7 +1,8 @@
 const express = require("express");
+
 const authRouter = require("./routes/auth");
 const postsRouter = require("./routes/posts");
-
+const commentRouter = require("./routes/comments");
 const usersRouter = require("./routes/users");
 
 const { sequelize } = require("./models");
@@ -11,6 +12,7 @@ const port = 1004;
 app.use(express.json());
 app.use(authRouter);
 app.use("/posts", postsRouter);
+app.use("/comments", commentRouter);
 app.use("/users", usersRouter);
 // app.use("/", [usersRouter]);
 

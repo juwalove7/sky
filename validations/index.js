@@ -23,8 +23,20 @@ const postUpdateValidation = Joi.object({
   userId: Joi.forbidden(),
 });
 
+const commentCreateValidation = Joi.object({
+  comment: Joi.string().not("").required(),
+  userId: Joi.number().required(),
+  postId: Joi.forbidden(),
+});
+
+const commentUpdateValidation = Joi.object({
+  comment: Joi.string().not("").required(),
+});
+
 module.exports = {
   signupValidation,
   postCreateValidation,
   postUpdateValidation,
+  commentCreateValidation,
+  commentUpdateValidation,
 };
