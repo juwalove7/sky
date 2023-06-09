@@ -14,6 +14,16 @@ Content-Type: application/json
 }
 
 ###
+// 로그인
+POST http://localhost:1004/login
+Content-Type: application/json
+
+{
+    "email": "love@love.com",
+    "password": "pw12345"
+}
+
+###
 // 유저 정보 확인
 GET http://localhost:1004/users
 
@@ -29,11 +39,11 @@ GET http://localhost:1004/posts/4
 // 게시글 작성
 POST http://localhost:1004/posts
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmVAbG92ZS5jb20iLCJpYXQiOjE2ODYyOTUyMzZ9.8Vx-yOlP794O4Ou1j8sY6C6OTVpYRhJFrP-zKnosTvs
 
 {
-    "title": "cocoa milk",
-    "content": "is great",
-    "userId": 1
+    "title": "milk milk",
+    "content": "is great"
 }
 
 ###
@@ -49,6 +59,12 @@ Content-Type: application/json
 ###
 // 게시글 삭제
 DELETE http://localhost:1004/posts/3
+
+###
+// 게시글 좋아요
+POST http://localhost:1004/posts/1/like
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmVAbG92ZS5jb20iLCJpYXQiOjE2ODYyOTU2NTR9.3CebmifpZ7B4fX9aegXtx160qoWiB7Q3pekgOelQD4Q
 
 ###
 // 댓글 조회
