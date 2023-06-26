@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f4cf57afa4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <title>SkyLove</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar"
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: antiquewhite;
+
+        margin: 0px;
+        padding: 8px 12px;
+
+        font-family: 'Nanum Myeongjo', serif;
+      "
+    >
+      <nav class="navbar__logo" style="font-size: 20px; color: cornflowerblue">
+        <i class="fa-regular fa-heart"></i>
+        <a href="">SKYLOVE</a>
+        <i class="fa-regular fa-heart"></i>
+      </nav>
+      <nav class="navbar__between"></nav>
+      <nav class="navbar__login">
+        <button>로그인</button>
+        <button>회원가입</button>
+      </nav>
+    </nav>
+    <div
+      class="maindiv"
+      style="display: flex; justify-content: between; align-items: center"
+    >
+      <div class="category">
+        <div
+          class="menu"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: 10px;
+            padding: 5px 10px;
+          "
+        >
+          <div class="header">Category</div>
+          <a href="" class="Grace">🌏 은혜나눔</a>
+          <a href="" class="Bible">⭐ 성경이야기</a>
+          <a href="" class="Proverb">🔥 오늘의 잠언</a>
+          <a href="" class="Word">💌 생명의 말씀</a>
+          <a href="" class="Faith">🧡 신앙 노하우</a>
+          <a href="" class="Marketplace">⛪ 사랑장터</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="write">
+          <input
+            type="text"
+            style="width: 500px; height: 50px"
+            placeholder="어떤 이야기를 하고 싶나요?"
+          />
+          <button type="button" class="btn btn-outline-secondary btn-sm">
+            글쓰기
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

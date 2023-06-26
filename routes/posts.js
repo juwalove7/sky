@@ -77,7 +77,7 @@ router.post("/", authMiddleware, async (req, res) => {
 });
 
 // 게시글 수정
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", authMiddleware, async (req, res) => {
   const { id } = req.params;
   try {
     // title나 content 중 보내는 것만 수정
@@ -97,7 +97,7 @@ router.patch("/:id", async (req, res) => {
 });
 
 // 게시글 삭제
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", authMiddleware, async (req, res) => {
   try {
     const { id } = req.params;
     const post = await Post.destroy({ where: { id } });

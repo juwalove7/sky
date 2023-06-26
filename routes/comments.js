@@ -7,6 +7,8 @@ const {
   commentUpdateValidation,
 } = require("../validations");
 
+const authMiddleware = require("../middleware/auth");
+
 // 댓글 조회
 router.get("/", async (req, res) => {
   try {
@@ -31,7 +33,7 @@ router.get("/:postId", async (req, res) => {
 });
 
 // 댓글 작성
-router.post("/:postId", async (req, res) => {
+router.post("/:postId", authMiddleware, async (req, res) => {
   const { postId } = req.params;
 
   try {
@@ -54,7 +56,7 @@ router.post("/:postId", async (req, res) => {
 });
 
 // 댓글 수정
-router.patch("/:id", async (req, res) => {
+router.patch("/:id", authMiddleware, async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -76,7 +78,7 @@ router.patch("/:id", async (req, res) => {
 });
 
 // 댓글 삭제
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", authMiddleware, async (req, res) => {
   const { id } = req.params;
 
   try {

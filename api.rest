@@ -10,7 +10,7 @@ Content-Type: application/json
     "nickname": "banana",
     "password": "pw12345",
     "confirm": "pw12345",
-    "email": "love@love.com"
+    "email": "love1@love.com"
 }
 
 ###
@@ -19,7 +19,7 @@ POST http://localhost:1004/login
 Content-Type: application/json
 
 {
-    "email": "love@love.com",
+    "email": "love1@love.com",
     "password": "pw12345"
 }
 
@@ -33,7 +33,7 @@ GET http://localhost:1004/posts
 
 ###
 // 게시글 상세조회
-GET http://localhost:1004/posts/4
+GET http://localhost:1004/posts/5
 
 ###
 // 게시글 작성
@@ -42,7 +42,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmVAbG92ZS5jb20iLCJpYXQiOjE2ODYyOTUyMzZ9.8Vx-yOlP794O4Ou1j8sY6C6OTVpYRhJFrP-zKnosTvs
 
 {
-    "title": "milk milk",
+    "title": "milk7",
     "content": "is great"
 }
 
@@ -50,21 +50,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmVAb
 // 게시글 수정
 PATCH  http://localhost:1004/posts/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzMyODY5fQ.vHy2MTH94Hh3M3GK1yEEHd0RF8jyeWsh20qcYOBz3LI
 
 {
-    "title": "strawberry milk",
+    "title": "123milk",
     "content": "is great"
 }
 
 ###
 // 게시글 삭제
-DELETE http://localhost:1004/posts/3
+DELETE http://localhost:1004/posts/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzMyODY5fQ.vHy2MTH94Hh3M3GK1yEEHd0RF8jyeWsh20qcYOBz3LI
 
 ###
 // 게시글 좋아요
-POST http://localhost:1004/posts/1/like
+POST http://localhost:1004/posts/8/like
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmVAbG92ZS5jb20iLCJpYXQiOjE2ODYyOTU2NTR9.3CebmifpZ7B4fX9aegXtx160qoWiB7Q3pekgOelQD4Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg2Mjk2NDM0fQ.Gsw96EkKJQJ54qULbkcWi8aNatMJTxZPQgDabo7z6LA
 
 ###
 // 댓글 조회
@@ -72,12 +74,13 @@ GET http://localhost:1004/comments
 
 ###
 // 한 게시글에 해당하는 댓글 조회
-GET http://localhost:1004/comments/1
+GET http://localhost:1004/comments/8
 
 ###
 // 댓글 작성
-POST http://localhost:1004/comments/1
+POST http://localhost:1004/comments/8
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzM0MTQ2fQ.nOcQnKqQaDyWVxEa4QfwLyXArDNLvsPLUtDKIkqAlPA
 
 {
     "comment": "ho",
@@ -86,8 +89,9 @@ Content-Type: application/json
 
 ###
 // 댓글 수정
-PATCH  http://localhost:1004/comments/2
+PATCH  http://localhost:1004/comments/8
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzM0MTQ2fQ.nOcQnKqQaDyWVxEa4QfwLyXArDNLvsPLUtDKIkqAlPA
 
 {
     "comment": "sky"
@@ -95,4 +99,5 @@ Content-Type: application/json
 
 ###
 // 댓글 삭제
-DELETE http://localhost:1004/comments/3
+DELETE http://localhost:1004/comments/8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzM0MTQ2fQ.nOcQnKqQaDyWVxEa4QfwLyXArDNLvsPLUtDKIkqAlPA
