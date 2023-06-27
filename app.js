@@ -1,6 +1,7 @@
 // express 인스턴스 생성 및 app에 저장
 const express = require("express");
 const app = express();
+const path = require("path");
 
 const authRouter = require("./routes/auth");
 const postsRouter = require("./routes/posts");
@@ -18,6 +19,8 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "static")));
+
 app.use(authRouter);
 app.use("/posts", postsRouter);
 app.use("/comments", commentRouter);

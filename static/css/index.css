@@ -1,0 +1,15 @@
+.mainnavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+
+  margin: 10px;
+  padding: 8px 12px;
+
+  font-family: "Nanum Myeongjo", serif;
+}
+
+.Grace {
+  background-color: white;
+}

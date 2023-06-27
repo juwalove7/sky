@@ -78,23 +78,23 @@ GET http://localhost:1004/comments/8
 
 ###
 // 댓글 작성
-POST http://localhost:1004/comments/8
+POST http://localhost:1004/comments/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzM0MTQ2fQ.nOcQnKqQaDyWVxEa4QfwLyXArDNLvsPLUtDKIkqAlPA
 
 {
-    "comment": "ho",
+    "comment": "hoHOHO",
     "userId": 1
 }
 
 ###
 // 댓글 수정
-PATCH  http://localhost:1004/comments/8
+PATCH  http://localhost:1004/comments/7
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxvdmUxQGxvdmUuY29tIiwiaWF0IjoxNjg3MzM0MTQ2fQ.nOcQnKqQaDyWVxEa4QfwLyXArDNLvsPLUtDKIkqAlPA
 
 {
-    "comment": "sky"
+    "comment": "skyinin"
 }
 
 ###
